@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #ffffff;
@@ -19,50 +20,50 @@
             flex-direction: column;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 700px;
             width: 100%;
             margin: 0 auto;
             flex: 1;
         }
-        
+
         .header {
             text-align: center;
             padding: 40px 0;
             border-bottom: 2px solid #000;
             margin-bottom: 40px;
         }
-        
+
         .logo {
             font-size: 60px;
             margin-bottom: 20px;
         }
-        
+
         h1 {
             color: #000;
             font-size: 32px;
             margin-bottom: 10px;
             font-weight: 700;
         }
-        
+
         .subtitle {
             color: #666;
             font-size: 16px;
             margin-top: 10px;
         }
-        
+
         .content {
             background: #f5f5f5;
             border: 2px solid #000;
             padding: 30px;
             margin-bottom: 30px;
         }
-        
+
         .features {
             margin: 30px 0;
         }
-        
+
         .feature {
             display: flex;
             align-items: flex-start;
@@ -70,11 +71,11 @@
             gap: 12px;
             text-align: right;
         }
-        
+
         .feature:last-child {
             margin-bottom: 0;
         }
-        
+
         .check {
             width: 20px;
             height: 20px;
@@ -88,18 +89,18 @@
             font-size: 12px;
             margin-top: 2px;
         }
-        
+
         .feature-text {
             color: #000;
             font-size: 16px;
             line-height: 1.5;
         }
-        
+
         .download-section {
             text-align: center;
             margin: 40px 0;
         }
-        
+
         .download-btn {
             background: #000;
             color: white;
@@ -112,40 +113,40 @@
             text-decoration: none;
             display: inline-block;
         }
-        
+
         .download-btn:hover {
             background: #333;
         }
-        
+
         .download-btn:active {
             background: #555;
         }
-        
+
         .steps {
             background: #fff;
             border: 2px solid #000;
             padding: 25px;
             margin-top: 30px;
         }
-        
+
         .steps h3 {
             color: #000;
             margin-bottom: 20px;
             font-size: 20px;
             text-align: right;
         }
-        
+
         .steps ol {
             text-align: right;
             color: #000;
             line-height: 2;
             padding-right: 20px;
         }
-        
+
         .steps li {
             margin-bottom: 10px;
         }
-        
+
         .warning {
             background: #f5f5f5;
             border: 2px solid #000;
@@ -155,28 +156,28 @@
             font-size: 14px;
             text-align: center;
         }
-        
+
         .footer {
             text-align: center;
             padding: 40px 0 20px;
             border-top: 2px solid #000;
             margin-top: 60px;
         }
-        
+
         .creator {
             font-size: 16px;
             color: #000;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
-        
+
         .social-link {
             color: #000;
             text-decoration: none;
@@ -188,34 +189,35 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .social-link:hover {
             background: #000;
             color: white;
         }
-        
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 26px;
             }
-            
+
             .download-btn {
                 padding: 15px 40px;
                 font-size: 16px;
                 width: 100%;
             }
-            
+
             .social-links {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
+
             .social-link {
                 justify-content: center;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -223,7 +225,7 @@
             <h1>AdGuard Family Protection</h1>
             <p class="subtitle">حماية شاملة من الإعلانات والمحتوى غير المناسب</p>
         </div>
-        
+
         <div class="content">
             <div class="features">
                 <div class="feature">
@@ -248,13 +250,17 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="download-section">
             <a href="AdGuard-Family.mobileconfig" class="download-btn">
                 📥 تحميل الملف التعريفي
             </a>
+            <p style="margin-top: 15px; color: #666; font-size: 14px;">
+                ⚠️ <strong>ملاحظة هامة:</strong> يرجى فتح هذا الموقع في متصفح <strong>Safari</strong>.<br>
+                المتصفحات الأخرى (مثل Chrome) ستقوم بتحميل الملف فقط ولن تقوم بتثبيته مباشرة.
+            </p>
         </div>
-        
+
         <div class="steps">
             <h3>📱 خطوات التثبيت:</h3>
             <ol>
@@ -266,11 +272,11 @@
                 <li>اضغط "تثبيت" مرة أخرى للتأكيد</li>
             </ol>
         </div>
-        
+
         <div class="warning">
             ⚠️ <strong>ملاحظة:</strong> هذا الملف آمن تماماً ومن AdGuard الرسمي. يمكنك حذفه في أي وقت من الإعدادات.
         </div>
-        
+
         <div class="footer">
             <div class="creator">تم الإعداد بواسطة: Mohsen Jamal</div>
             <div class="social-links">
@@ -283,7 +289,8 @@
             </div>
         </div>
     </div>
-    
+
 
 </body>
+
 </html>
