@@ -579,6 +579,62 @@
             }
         }, true);
     </script>
+
+    <!-- Floating Counter Widget -->
+    <div id="protection-counter" style="
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: #000;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        border: 1px solid #333;
+    ">
+        <span style="font-size: 18px;">🛡️</span>
+        <div>
+            <span id="counter-number">1,452</span>
+            <span style="font-size: 11px; display: block; font-weight: normal; opacity: 0.8;"
+                data-i18n="protectedUsers">مستخدم محمي</span>
+        </div>
+    </div>
+
+    <script>
+        // Smart Counter Logic
+        (function () {
+            const counterElement = document.getElementById('counter-number');
+            const startCount = 1450;
+
+            // Get last count from storage or start fresh
+            let currentCount = parseInt(localStorage.getItem('adguard_protection_count')) || startCount;
+
+            // Increment slightly on each visit to simulate activity
+            if (localStorage.getItem('adguard_protection_count')) {
+                currentCount += Math.floor(Math.random() * 3) + 1;
+            }
+
+            localStorage.setItem('adguard_protection_count', currentCount);
+            counterElement.innerText = currentCount.toLocaleString();
+
+            // Add translations
+            translations.ar.protectedUsers = "مستخدم قاموا بتفعيل الحماية";
+            translations.en.protectedUsers = "Users protected so far";
+
+            // Re-apply translation incase language was already set
+            const lang = localStorage.getItem('preferredLanguage') || 'ar';
+            if (translations[lang]) {
+                document.querySelector('[data-i18n="protectedUsers"]').innerText = translations[lang].protectedUsers;
+            }
+        })();
+    </script>
 </body>
 
 </html>
