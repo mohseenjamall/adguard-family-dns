@@ -262,9 +262,9 @@
         </div>
 
         <div class="steps">
-            <h3>📱 خطوات التثبيت:</h3>
+            <h3>📱 خطوات التثبيت (iOS - iPhone/iPad):</h3>
             <ol>
-                <li>اضغط على زر التحميل أعلاه</li>
+                <li>اضغط على زر التحميل أعلاه (يجب استخدام <strong>Safari</strong>)</li>
                 <li>ستظهر رسالة "Profile Downloaded"</li>
                 <li>اذهب إلى: الإعدادات > عام > VPN وإدارة الأجهزة</li>
                 <li>اضغط على "AdGuard DNS - حماية الأسرة"</li>
@@ -272,6 +272,34 @@
                 <li>اضغط "تثبيت" مرة أخرى للتأكيد</li>
             </ol>
         </div>
+
+        <div class="steps" style="border-color: #4CAF50;">
+            <h3 style="color: #2E7D32;">🤖 خطوات التثبيت (Android):</h3>
+            <ol>
+                <li>اذهب إلى: الإعدادات > الشبكة والإنترنت > DNS الخاص (Private DNS)</li>
+                <li>اختر "اسم مضيف مزود DNS الخاص" (Private DNS provider hostname)</li>
+                <li>انسخ الرابط التالي وضعه في الخانة:</li>
+                <div
+                    style="background: #e8f5e9; padding: 10px; margin: 10px 0; border: 1px solid #4CAF50; display: flex; align-items: center; justify-content: space-between; border-radius: 4px;">
+                    <code id="dns-url" style="font-family: monospace; color: #2E7D32;">family.adguard-dns.com</code>
+                    <button onclick="copyDNS()"
+                        style="background: #4CAF50; color: white; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; font-family: inherit;">نسخ</button>
+                </div>
+                <li>اضغط "حفظ" (Save)</li>
+            </ol>
+        </div>
+
+        <script>
+            function copyDNS() {
+                const dnsText = document.getElementById('dns-url').innerText;
+                navigator.clipboard.writeText(dnsText).then(() => {
+                    alert('تم نسخ الرابط بنجاح!');
+                }).catch(err => {
+                    console.error('فشل النسخ', err);
+                    alert('عذراً، حدث خطأ أثناء النسخ');
+                });
+            }
+        </script>
 
         <div class="warning">
             ⚠️ <strong>ملاحظة:</strong> هذا الملف آمن تماماً ومن AdGuard الرسمي. يمكنك حذفه في أي وقت من الإعدادات.
