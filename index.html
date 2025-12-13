@@ -262,10 +262,57 @@
                 justify-content: center;
             }
         }
+
+        .side-ad {
+            width: 160px;
+            /* Standard wide skyscraper width + margin */
+            padding-top: 20px;
+            display: none;
+            /* Hidden by default (mobile) */
+        }
+
+        .side-ad .ad-container {
+            position: sticky;
+            top: 20px;
+        }
+
+        @media (min-width: 1100px) {
+            body {
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .side-ad {
+                display: block;
+            }
+
+            .container {
+                margin: 0;
+                /* Remove auto margin since we use flex center */
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Left Ad -->
+    <div class="side-ad">
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key': '8f60ce2891165a975aa7a4dca0af0dda',
+                    'format': 'iframe',
+                    'height': 600,
+                    'width': 160,
+                    'params': {}
+                };
+            </script>
+            <script type="text/javascript"
+                src="https://www.highperformanceformat.com/8f60ce2891165a975aa7a4dca0af0dda/invoke.js"></script>
+        </div>
+    </div>
+
     <div class="container">
         <button class="lang-switch" onclick="toggleLanguage()">English</button>
 
@@ -483,6 +530,24 @@
         // Add a small delay/check to ensure DOM is ready if script runs in head, but here it is at end of body
         setLanguage(savedLang);
     </script>
+
+
+    <!-- Right Ad -->
+    <div class="side-ad">
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key': '8f60ce2891165a975aa7a4dca0af0dda',
+                    'format': 'iframe',
+                    'height': 600,
+                    'width': 160,
+                    'params': {}
+                };
+            </script>
+            <script type="text/javascript"
+                src="https://www.highperformanceformat.com/8f60ce2891165a975aa7a4dca0af0dda/invoke.js"></script>
+        </div>
+    </div>
 </body>
 
 </html>
