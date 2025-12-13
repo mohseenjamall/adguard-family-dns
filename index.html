@@ -581,31 +581,48 @@
     </script>
 
     <!-- Floating Counter Widget -->
-    <div id="protection-counter" style="
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background: #000;
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-family: 'IBM Plex Sans Arabic', sans-serif;
-        font-weight: bold;
-        font-size: 14px;
-        border: 1px solid #333;
-    ">
-        <span style="font-size: 18px;">🛡️</span>
+    <div id="protection-counter" class="counter-widget">
+        <span style="font-size: 24px;">🛡️</span>
         <div>
-            <span id="counter-number">1,452</span>
+            <span id="counter-number" style="font-size: 16px;">1,452</span>
             <span style="font-size: 11px; display: block; font-weight: normal; opacity: 0.8;"
                 data-i18n="protectedUsers">مستخدم محمي</span>
         </div>
     </div>
+
+    <style>
+        .counter-widget {
+            position: fixed;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        /* RTL (Arabic) positions right, LTR (English) positions left */
+        html[dir="rtl"] .counter-widget {
+            right: 20px;
+            left: auto;
+            flex-direction: row;
+        }
+
+        html[dir="ltr"] .counter-widget {
+            left: 20px;
+            right: auto;
+            flex-direction: row;
+        }
+    </style>
 
     <script>
         // Smart Counter Logic
