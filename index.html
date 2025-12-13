@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdGuard Family Protection - حماية الأسرة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            flex: 1;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #000;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #000;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .content {
+            background: #f5f5f5;
+            border: 2px solid #000;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            margin: 30px 0;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 12px;
+            text-align: right;
+        }
+        
+        .feature:last-child {
+            margin-bottom: 0;
+        }
+        
+        .check {
+            width: 20px;
+            height: 20px;
+            background: #000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+        
+        .feature-text {
+            color: #000;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .download-btn {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 18px 60px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .download-btn:hover {
+            background: #333;
+        }
+        
+        .download-btn:active {
+            background: #555;
+        }
+        
+        .steps {
+            background: #fff;
+            border: 2px solid #000;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        
+        .steps h3 {
+            color: #000;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: right;
+        }
+        
+        .steps ol {
+            text-align: right;
+            color: #000;
+            line-height: 2;
+            padding-right: 20px;
+        }
+        
+        .steps li {
+            margin-bottom: 10px;
+        }
+        
+        .warning {
+            background: #f5f5f5;
+            border: 2px solid #000;
+            padding: 20px;
+            margin-top: 20px;
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 2px solid #000;
+            margin-top: 60px;
+        }
+        
+        .creator {
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 10px 20px;
+            border: 2px solid #000;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .social-link:hover {
+            background: #000;
+            color: white;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 26px;
+            }
+            
+            .download-btn {
+                padding: 15px 40px;
+                font-size: 16px;
+                width: 100%;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .social-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🛡️</div>
+            <h1>AdGuard Family Protection</h1>
+            <p class="subtitle">حماية شاملة من الإعلانات والمحتوى غير المناسب</p>
+        </div>
+        
+        <div class="content">
+            <div class="features">
+                <div class="feature">
+                    <div class="check">✓</div>
+                    <div class="feature-text">حظر جميع الإعلانات في التطبيقات والمواقع</div>
+                </div>
+                <div class="feature">
+                    <div class="check">✓</div>
+                    <div class="feature-text">منع المحتوى الإباحي والمواقع غير المناسبة</div>
+                </div>
+                <div class="feature">
+                    <div class="check">✓</div>
+                    <div class="feature-text">حماية على مستوى النظام بالكامل</div>
+                </div>
+                <div class="feature">
+                    <div class="check">✓</div>
+                    <div class="feature-text">يعمل على Wi-Fi والبيانات الخلوية</div>
+                </div>
+                <div class="feature">
+                    <div class="check">✓</div>
+                    <div class="feature-text">مجاني بالكامل - بدون اشتراكات</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <button class="download-btn" onclick="downloadProfile()">
+                📥 تحميل الملف التعريفي
+            </button>
+        </div>
+        
+        <div class="steps">
+            <h3>📱 خطوات التثبيت:</h3>
+            <ol>
+                <li>اضغط على زر التحميل أعلاه</li>
+                <li>ستظهر رسالة "Profile Downloaded"</li>
+                <li>اذهب إلى: الإعدادات > عام > VPN وإدارة الأجهزة</li>
+                <li>اضغط على "AdGuard DNS - حماية الأسرة"</li>
+                <li>اضغط "تثبيت" وأدخل رمز القفل</li>
+                <li>اضغط "تثبيت" مرة أخرى للتأكيد</li>
+            </ol>
+        </div>
+        
+        <div class="warning">
+            ⚠️ <strong>ملاحظة:</strong> هذا الملف آمن تماماً ومن AdGuard الرسمي. يمكنك حذفه في أي وقت من الإعدادات.
+        </div>
+        
+        <div class="footer">
+            <div class="creator">تم الإعداد بواسطة: Mohsen Jamal</div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/mohseenjamall" target="_blank" class="social-link">
+                    <span>📘</span> Facebook
+                </a>
+                <a href="https://github.com/mohseenjamall" target="_blank" class="social-link">
+                    <span>💻</span> GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadProfile() {
+            const profileContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+        <dict>
+            <key>Name</key>
+            <string>AdGuard DNS Family Protection</string>
+            <key>PayloadDescription</key>
+            <string>يحظر الإعلانات والمحتوى الإباحي والمواقع غير المناسبة - تم الإعداد بواسطة Mohsen Jamal</string>
+            <key>PayloadDisplayName</key>
+            <string>AdGuard DNS - حماية الأسرة</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.family.protection</string>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadUUID</key>
+            <string>767A11FC-31D2-4950-815E-B37B15448CA2</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://family.adguard-dns.com/dns-query</string>
+            </dict>
+            <key>PayloadOrganization</key>
+            <string>Mohsen Jamal</string>
+        </dict>
+    </array>
+	<key>PayloadDescription</key>
+	<string>يضيف حماية AdGuard Family لمنع الإعلانات والمحتوى الإباحي على iOS 14 أو أحدث - تم الإعداد بواسطة Mohsen Jamal (github.com/mohseenjamall)</string>
+	<key>PayloadDisplayName</key>
+	<string>AdGuard DNS - حماية الأسرة</string>
+	<key>PayloadIdentifier</key>
+    <string>com.adguard.family.full.protection</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>F2609BEA-93D6-4966-8487-33713DBCB644</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>PayloadOrganization</key>
+	<string>Mohsen Jamal</string>
+</dict>
+</plist>`;
+            
+            const blob = new Blob([profileContent], { type: 'application/x-apple-aspen-config' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'AdGuard-Family-MohsenJamal.mobileconfig';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            alert('✅ تم بدء التحميل!\n\nالآن اذهب إلى:\nالإعدادات > عام > VPN وإدارة الأجهزة\nلإكمال التثبيت.');
+        }
+    </script>
+</body>
+</html>

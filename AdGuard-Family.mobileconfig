@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+        <dict>
+            <key>Name</key>
+            <string>AdGuard DNS Family Protection</string>
+            <key>PayloadDescription</key>
+            <string>يحظر الإعلانات والمحتوى الإباحي والمواقع غير المناسبة</string>
+            <key>PayloadDisplayName</key>
+            <string>AdGuard DNS - حماية الأسرة</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.dnsSettings.managed.family.protection</string>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadUUID</key>
+            <string>767A11FC-31D2-4950-815E-B37B15448CA2</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://family.adguard-dns.com/dns-query</string>
+            </dict>
+        </dict>
+    </array>
+	<key>PayloadDescription</key>
+	<string>يضيف حماية AdGuard Family لمنع الإعلانات والمحتوى الإباحي على iOS 14 أو أحدث</string>
+	<key>PayloadDisplayName</key>
+	<string>AdGuard DNS - حماية الأسرة الكاملة</string>
+	<key>PayloadIdentifier</key>
+    <string>com.adguard.family.full.protection</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>F2609BEA-93D6-4966-8487-33713DBCB644</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
