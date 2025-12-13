@@ -317,6 +317,7 @@
                 };
             </script>
             <script type="text/javascript"
+                onerror="document.querySelectorAll('.side-ad').forEach(el => el.style.display='none')"
                 src="https://www.highperformanceformat.com/8f60ce2891165a975aa7a4dca0af0dda/invoke.js"></script>
         </div>
     </div>
@@ -331,18 +332,21 @@
         </div>
 
         <div class="content">
-            <!-- Native Banner Ad -->
-            <div
-                style="background: #e3f2fd; border: 1px solid #2196f3; padding: 15px; margin-bottom: 20px; border-radius: 4px; text-align: center;">
-                <p data-i18n="adTestDisclaimer" style="color: #0d47a1; font-size: 14px; margin: 0;">
-                    💡 وضعنا هذه الإعلانات هنا لتجربة الحماية. عند تفعيل الملف، ستختفي هذه الإعلانات تماماً، مما يؤكد لك
-                    أن الأداة تعمل بنجاح!
-                </p>
-            </div>
-            <div style="text-align: center; margin-bottom: 20px; min-height: 250px;">
-                <script async="async" data-cfasync="false"
-                    src="//pl28252033.effectivegatecpm.com/08d8dfd3ba2159a2f742361b90b80995/invoke.js"></script>
-                <div id="container-08d8dfd3ba2159a2f742361b90b80995"></div>
+            <!-- Native Banner Ad Section -->
+            <div id="central-ad-block">
+                <div
+                    style="background: #e3f2fd; border: 1px solid #2196f3; padding: 15px; margin-bottom: 20px; border-radius: 4px; text-align: center;">
+                    <p data-i18n="adTestDisclaimer" style="color: #0d47a1; font-size: 14px; margin: 0;">
+                        💡 وضعنا هذه الإعلانات هنا لتجربة الحماية. عند تفعيل الملف، ستختفي هذه الإعلانات تماماً، مما
+                        يؤكد لك أن الأداة تعمل بنجاح!
+                    </p>
+                </div>
+                <div style="text-align: center; margin-bottom: 20px; min-height: 250px;">
+                    <script async="async" data-cfasync="false"
+                        onerror="document.getElementById('central-ad-block').style.display='none'"
+                        src="//pl28252033.effectivegatecpm.com/08d8dfd3ba2159a2f742361b90b80995/invoke.js"></script>
+                    <div id="container-08d8dfd3ba2159a2f742361b90b80995"></div>
+                </div>
             </div>
 
             <div class="features">
@@ -538,7 +542,7 @@
 
 
     <!-- Right Ad -->
-    <div class="side-ad">
+    <div class="side-ad right-ad">
         <div class="ad-container">
             <script type="text/javascript">
                 atOptions = {
@@ -550,9 +554,20 @@
                 };
             </script>
             <script type="text/javascript"
+                onerror="document.querySelectorAll('.side-ad').forEach(el => el.style.display='none')"
                 src="https://www.highperformanceformat.com/8f60ce2891165a975aa7a4dca0af0dda/invoke.js"></script>
         </div>
     </div>
+
+    <script>
+        // Global check: if ad scripts fail (DNS blocked), hide all ad containers
+        window.addEventListener('error', function (e) {
+            if (e.target.tagName === 'SCRIPT' && (e.target.src.includes('effectivegatecpm') || e.target.src.includes('highperformanceformat'))) {
+                document.getElementById('central-ad-block').style.display = 'none';
+                document.querySelectorAll('.side-ad').forEach(el => el.style.display = 'none');
+            }
+        }, true);
+    </script>
 </body>
 
 </html>
