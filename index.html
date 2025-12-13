@@ -34,13 +34,20 @@
             position: absolute;
             top: 0;
             left: 0;
-            padding: 8px 16px;
-            background: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 10px;
+            background: transparent;
+            border: none;
             cursor: pointer;
             font-family: inherit;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .lang-switch:hover {
+            color: #000;
+            text-decoration: underline;
         }
 
         html[dir="ltr"] .lang-switch {
