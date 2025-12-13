@@ -12,6 +12,16 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-17QF2QPHQB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-17QF2QPHQB');
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -374,7 +384,8 @@
         </div>
 
         <div class="download-section">
-            <a href="AdGuard-Family.mobileconfig" class="download-btn" data-i18n="downloadBtn">
+            <a href="AdGuard-Family.mobileconfig" class="download-btn" data-i18n="downloadBtn"
+                onclick="gtag('event', 'download_ios_profile')">
                 📥 تحميل الملف التعريفي
             </a>
             <p style="margin-top: 15px; color: #666; font-size: 14px;" data-i18n="safariWarning">
@@ -404,7 +415,7 @@
                 <div
                     style="background: #e8f5e9; padding: 10px; margin: 10px 0; border: 1px solid #4CAF50; display: flex; align-items: center; justify-content: space-between; border-radius: 4px;">
                     <code id="dns-url" style="font-family: monospace; color: #2E7D32;">family.adguard-dns.com</code>
-                    <button onclick="copyDNS()"
+                    <button onclick="copyDNS(); gtag('event', 'copy_android_dns')"
                         style="background: #4CAF50; color: white; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; font-family: inherit;"
                         data-i18n="copyBtn">نسخ</button>
                 </div>
