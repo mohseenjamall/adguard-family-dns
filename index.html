@@ -639,7 +639,27 @@
             }
 
             localStorage.setItem('adguard_protection_count', currentCount);
-            counterElement.innerText = currentCount.toLocaleString();
+
+            // Animation Logic
+            const duration = 2000; // 2 seconds
+            const steps = 50;
+            const intervalTime = duration / steps;
+            const startValue = currentCount - 150; // Start slightly lower
+            let step = 0;
+
+            const timer = setInterval(() => {
+                step++;
+                const progress = step / steps;
+                // Ease-out effect
+                const current = Math.round(startValue + (currentCount - startValue) * (1 - Math.pow(1 - progress, 3)));
+
+                counterElement.innerText = current.toLocaleString();
+
+                if (step >= steps) {
+                    clearInterval(timer);
+                    counterElement.innerText = currentCount.toLocaleString();
+                }
+            }, intervalTime);
 
             // Add translations
             translations.ar.protectedUsers = "مستخدم قاموا بتفعيل الحماية";
